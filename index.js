@@ -9,7 +9,7 @@ webApp.use(express.urlencoded({
 }));
 webApp.use(express.json());
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
