@@ -9,7 +9,7 @@ webApp.use(express.urlencoded({
 }));
 webApp.use(express.json());
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 5000;
 
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
@@ -85,7 +85,8 @@ const getErrorMessage = () => {
 
     return formatResponseForDialogflow(
         [
-            'We are facing a technical issue.'
+            'We are facing a technical issue.',
+            'Please try after sometimes or contact the XYZ restaurant.'
         ],
         '',
         '',
@@ -118,7 +119,7 @@ webApp.post('/dialogflow', async (req, res) => {
                 ''
             ));
         } else {
-            res.send(result);
+            res.send(getErrorMessage());
         }
 
     } else {
