@@ -86,7 +86,7 @@ const getErrorMessage = () => {
     return formatResponseForDialogflow(
         [
             'We are facing a technical issue.',
-            'Please try after sometimes or contact the XYZ restaurant.'
+            'Please try after sometime.'
         ],
         '',
         '',
