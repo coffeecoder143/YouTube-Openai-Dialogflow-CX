@@ -85,8 +85,7 @@ const getErrorMessage = () => {
 
     return formatResponseForDialogflow(
         [
-            'We are facing a technical issue.',
-            'Please try after sometimes or contact the XYZ restaurant.'
+            'We are facing a technical issue.'
         ],
         '',
         '',
@@ -119,7 +118,7 @@ webApp.post('/dialogflow', async (req, res) => {
                 ''
             ));
         } else {
-            res.send(getErrorMessage());
+            res.send(result);
         }
 
     } else {
